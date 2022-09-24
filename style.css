@@ -172,3 +172,13 @@ h6 {
    text-align: center;
    padding: 20px;
 }
+
+@media (max-width: 420px){
+   .plug img{
+      width: 90%;
+
+   }
+   .start-button{
+      width: 120px;
+   }
+}
