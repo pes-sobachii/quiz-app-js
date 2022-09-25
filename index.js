@@ -13,6 +13,10 @@ const playerLevel = document.querySelector('.endpage__level')
 
 let currentScore = 0, correctAnswer = '', currentQuestion = 1, totalQuesionsCount = 10
 
+function escape(htmlStr) {
+   return htmlStr.replace(/&lt;/g , "<").replace(/&gt;/g , ">").replace(/&quot;/g , "\"").replace(/&#039;/g , "\'").replace(/&amp;/g , "&");
+}
+
 const getQuestions = async () => {
    const questions = await fetch('https://opentdb.com/api.php?amount=1')
    const result = await questions.json()
@@ -28,7 +32,7 @@ const countersRefresher = () => {
 
 const setQuestion = (data) => {
    correctAnswer = data.correct_answer
-   questionTitle.innerText = data.question
+   questionTitle.innerText = escape(data.question)
    const answers = [...data.incorrect_answers]
    answers.splice(Math.floor(Math.random() * 3), 0, correctAnswer);
    answersBody.innerHTML = ``
