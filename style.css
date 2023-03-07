@@ -24,13 +24,6 @@ a:active {
    outline: none;
 }
 
-nav,
-footer,
-header,
-aside {
-   display: block;
-}
-
 html,
 body {
    height: 100%;
@@ -54,10 +47,6 @@ input,
 button,
 textarea {
    font-family: inherit;
-}
-
-input::-ms-clear {
-   display: none;
 }
 
 button {
@@ -107,8 +96,6 @@ h6 {
    background: linear-gradient(36deg, rgba(44,0,45,1) 0%, rgba(9,9,121,1) 54%, rgba(0,111,119,1) 100%);
    border-radius: 15px;
 }
-
-
 
 .plug__button{
    width: 20%;
